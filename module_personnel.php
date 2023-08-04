@@ -1,12 +1,37 @@
-<?php include_once(__DIR__ . './include/header.php'); ?>
+<?php include_once(__DIR__ . './include/header.php'); 
+
+?>
 
   <main>
   
 	<h1>Module personnel</h1>	
-    <p>(Remplacez ce paragraphe par une courte phrase qui explique l'information qui est affichée par le module)</p>
+    <p>(Affichage de la liste de client)</p>
     
-    <!-- Affichez les enregistrement de la table que vous avez ajoutée à la base de données. -->
-	
+<?php require_once 'controleurs/clients.php';
+
+$controleurClients=new ControleurClients;
+
+if (isset($_POST['boutonAjouter'])) {        
+    $controleurClients->ajouter();
+} else if (isset($_POST['boutonEditer'])) {      
+    $controleurClients->editer();
+} else if (isset($_POST['boutonSupprimer'])) {        
+    $controleurClients->supprimer();
+} 
+?>
+
+<div class="container">
+        
+
+        <h1>Liste des clients</h1>
+
+        <?php
+            $controleurClients->afficherTableauGestion();
+        ?>
+
+    </div>
+
+
   </main>
 
 <?php include_once(__DIR__ . './include/footer.php'); ?>

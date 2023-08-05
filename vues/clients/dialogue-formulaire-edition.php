@@ -18,7 +18,7 @@
 
             <div>
                 <label for="date_naissance">Date de naissance *</label>           
-                <input type="date" id="dialogue-formulaire-edition-date-naissance" name="sex" required max="1900-01-01" value="<?= $client->date_naissance ?>">
+                <input type="date" id="dialogue-formulaire-edition-date-naissance" name="date_naissance" required  value="<?= $client->date_naissance ?>">
             </div>
 
             <div>

@@ -17,7 +17,7 @@
           </div>
           <div>
             <label for="date_naissance">Date de naissance *</label>
-            <input type="date" id="date_naissance" name="date_naissance" required  max="1900-01-01">
+            <input type="date" id="date_naissance" name="date_naissance" required  min="1900-01-01">
           </div>
           <div>
             <label for="lieu_residence">Lieu de résidence *</label>

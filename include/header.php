@@ -10,6 +10,7 @@
   <title>Titre de la page (défi! rendre ce titre dynamique selon la page sélectionnée)</title>
   
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/clients.js"></script>
 </head>
 
 <body class="light-mode">

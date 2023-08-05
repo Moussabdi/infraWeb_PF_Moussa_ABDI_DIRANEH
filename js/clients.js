@@ -8,8 +8,8 @@ function ouvrirDialogueFiche(id) {
     if (client) {
       document.getElementById("dialogue-fiche-nom").textContent = client.nom;
 
-      document.getElementById("dialogue-fiche-prenom").textContent =
-        client.prenom;
+      document.getElementById("dialogue-fiche-lieu-residence").textContent =
+        client.lieu_residence;
 
       dialogue.showModal();
     }

@@ -1,6 +1,6 @@
 <?php
 
-require_once "./include/config.php";
+require_once __DIR__ . '../../include/config.php';
 
 class modele_client {
     public $id; 
@@ -103,7 +103,7 @@ class modele_client {
         $requete->bind_param("sssss", $nom, $prenom, $sex, $date_naissance, $lieu_residence);
 
         if($requete->execute()) { // Exécution de la requête
-            $message = "Client ajouté";  // Message ajouté dans la page en cas d'ajout réussi
+            $message = "Pour votre info, le client a été ajouté dans le tableau!";  // Message ajouté dans la page en cas d'ajout réussi
         } else {
             $message =  "Une erreur est survenue lors de l'ajout: " . $requete->error;  // Message ajouté dans la page en cas d’échec
         }

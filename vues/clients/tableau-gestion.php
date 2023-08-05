@@ -19,6 +19,7 @@
         <tr>
             <td><?= $client->nom ?></td>
             <td><?= $client->prenom?></td>
+            <td><?= $client->sex?></td>
             <td><?= $client->date_naissance ?></td>
             <td><?= $client->lieu_residence ?></td>
             <td>

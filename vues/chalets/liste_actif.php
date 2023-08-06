@@ -1,9 +1,9 @@
 <!-- Affichage en mode "liste" -->
 <h2>Affichage de la liste actif de chalet :
 
-  <?php
+ nombre actif (<?php
 echo count($chalets);
-?>
+?>)
 
 </h2>
 <ul>

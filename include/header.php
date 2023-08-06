@@ -11,6 +11,9 @@
   
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/clients.js"></script>
+  <?php 
+require_once 'controleurs/regions.php';
+ ?>
 </head>
 
 <body class="light-mode">
@@ -30,6 +33,10 @@
               <li><a href="#">Région #3</a></li>
               <li><a href="#">...</a></li>
             </ul>
+            <?php
+        $ControleurRegions= new ControleurRegions;
+        $ControleurRegions->afficherUneSeuleRegion();        
+    ?>
           </li>
           <li><a href="liste_chalets_en_promotion.php">Chalets en promotion</a></li>
           <li><a href="module_personnel.php">Module personnel</a></li>

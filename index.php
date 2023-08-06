@@ -1,4 +1,6 @@
-<?php include_once(__DIR__ . './include/header.php'); ?>
+<?php include_once(__DIR__ . './include/header.php'); 
+require_once './controleurs/chalets.php';
+require_once './modeles/chalets.php'?>
 
 <main>
     <h1>Projet final</h1>
@@ -11,7 +13,8 @@
         <div class="container">
           <h4>Chalet #1</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=1">Pour en savoir plus</a>
+ 
         </div>
       </div>
 
@@ -20,7 +23,7 @@
         <div class="container">
           <h4>Chalet #2</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=2">Pour en savoir plus</a>
         </div>
       </div>
 
@@ -29,7 +32,7 @@
         <div class="container">
           <h4>Chalet #3</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=3">Pour en savoir plus</a>
         </div>
       </div>
 
@@ -38,7 +41,7 @@
         <div class="container">
           <h4>Chalet #4</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=4">Pour en savoir plus</a>
         </div>
       </div>
 
@@ -47,7 +50,7 @@
         <div class="container">
           <h4>Chalet #5</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=5">Pour en savoir plus</a>
         </div>
       </div>
 
@@ -56,10 +59,11 @@
         <div class="container">
           <h4>Chalet #6</h4>
           <span>à partir de 0,00 $</span>
-          <a href="#">Pour en savoir plus</a>
+          <a href="fiche_chalet.php?id=6">Pour en savoir plus</a>
         </div>
       </div>
 
+      
 
   </div>
 

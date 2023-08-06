@@ -49,7 +49,7 @@ class modele_region {
     }
 
     /***
-     * Fonction permettant de récupérer un region en fonction de son identifiant
+     * Fonction permettant de récupérer une region en fonction de son identifiant
      */
     public static function ObtenirUn($id) {
         $mysqli = self::connecter();

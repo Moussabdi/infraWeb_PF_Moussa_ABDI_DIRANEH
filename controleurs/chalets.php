@@ -19,6 +19,14 @@ class ControleurChalet {
         require './vues/chalets/liste_actif.php';
     }
 
+/***
+     * Fonction permettant de récupérer l'ensemble des chalets actif et de les afficher sous forme de liste
+     */
+    function afficherListeChaletActifEnPromo() {
+        $chalets = modele_chalet::ObtenirTousLesChaletsActifEnPromo();
+        require './vues/chalets/liste_actif_promo.php';
+    }
+
     /***
      * Fonction permettant de récupérer l'ensemble des chalets et de les afficher sous forme de tableau
      */
@@ -47,7 +55,7 @@ class ControleurChalet {
         if(isset($_GET["id"])) {
             $chalet = modele_chalet::ObtenirUn($_GET["id"]);
             if($chalet) {  // ou if($chalet != null)
-                require './vues/chalets/fiche.php';
+                require './vues/chalets/fiche.php';           
             } else {
                 $erreur = "Aucun chalet trouvé";
                 require './vues/erreur.php';

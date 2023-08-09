@@ -9,8 +9,8 @@ require_once 'controleurs/regions.php';
     <!-- Afficher la liste de tous les chalets actifs en ordre alphabétique -->
 
     <?php
-        $controlerChalets= new ControleurChalet;
-        $controlerChalets->afficherListeChaletActif();        
+        $ControleurChalets= new ControleurChalet;
+        $ControleurChalets->afficherListeChaletActif();        
     ?>
    
   </main>

@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/clients.js"></script>
   <?php 
-require_once 'controleurs/regions.php';
+require_once './controleurs/regions.php';
+require_once "./modeles/regions.php";
  ?>
 </head>
 
@@ -25,23 +26,23 @@ require_once 'controleurs/regions.php';
       <ul>
           <li><a href="index.php">Accueil</a></li>
           <li><a href="liste_chalets.php">Chalets à louer</a></li>
-          <li>
-            <a href="liste_chalets_par_region.php">Chalets par région &nbsp;<i class="arrow down"></i></a>
-            <ul>
-              <li><a href="#">Région #1</a></li>
-              <li><a href="#">Région #2</a></li>
-              <li><a href="#">Région #3</a></li>
-              <li><a href="#">...</a></li>
-            </ul>
+          <li>    
             <?php
-        $ControleurRegions= new ControleurRegions;
-        $ControleurRegions->afficherUneSeuleRegion();        
-    ?>
+            $ControleurRegions= new ControleurRegions;
+            $ControleurRegions->afficherListeDeroulanteRegions();        
+             ?>
           </li>
           <li><a href="liste_chalets_en_promotion.php">Chalets en promotion</a></li>
           <li><a href="module_personnel.php">Module personnel</a></li>
           <li>
-            <a href="administration_chalets.php">Administration &nbsp;<i class="arrow down"></i></a>
+            <?php
+            if(isset($_SESSION["utilisateur"])){
+              ?>
+              <a href="administration_chalets.php">Administration &nbsp;<i class="arrow down"></i></a>
+            
+            <?php
+}?>
+            
             <ul>
               <li><a href="administration_chalets.php">Chalets</a></li>
               <li><a href="administration_module_personnel.php">Module personnel</a></li>

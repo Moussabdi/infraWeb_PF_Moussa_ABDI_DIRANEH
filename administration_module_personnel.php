@@ -1,6 +1,10 @@
 <?php include_once(__DIR__ . './include/header.php'); ?>
 
-  <main>
+ 
+	<?php
+            if(isset($_SESSION["utilisateur"])){
+              ?>
+   <main>
   
 	<h1>Administration - Module personnel</h1>
 	
@@ -10,5 +14,10 @@
 	
 	
   </main>
+            
+            <?php
+} echo "Vous n'avez pas accès à ce contenu"
+
+?>
 
 <?php include_once(__DIR__ . './include/footer.php'); ?>

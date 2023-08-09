@@ -8,7 +8,8 @@ description longue, et le prix -->
 
 <!-- Assurez-vous que la page affiche l'entête et le pied de page, comme les autres pages -->
 
-<?php include_once(__DIR__ . './include/header.php');?>
+<?php include_once(__DIR__ . './include/header.php');
+require_once './controleurs/chalets.php';?>
 
     <main>
     

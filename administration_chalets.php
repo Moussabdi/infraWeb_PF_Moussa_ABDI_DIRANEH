@@ -1,6 +1,11 @@
 <?php include_once(__DIR__ . './include/header.php'); ?>
 
-  <main>
+  
+
+	<?php
+            if(isset($_SESSION["utilisateur"])){
+              ?>
+              <main>
   
 	<h1>Administration - Chalets</h1>
 
@@ -14,5 +19,9 @@
 		Si un utilisateur non connecté essaie d'accéder à la page, un message d'erreur doit s'afficher.
 	</p>
   </main>
+            
+            <?php
+} echo "Vous n'avez pas accès à ce contenu"
 
+?>
 <?php include_once(__DIR__ . './include/footer.php'); ?>

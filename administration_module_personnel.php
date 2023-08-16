@@ -12,6 +12,33 @@
 	<!-- Vous pouvez réaliser cette demande en utilisant plusieurs pages php (une pour l'ajout, une pour l'édition et une pour la suppression) ou utiliser des composants dialog ou Modals -->
 	<!-- Il doit être impossible d'accéder à cette page sans être préalablement connecté. Si un utilisateur non connecté essaie d'accéder à la page, un message d'erreur doit s'afficher -->
 	
+  <h1>Module personnel</h1>	
+    <p>(Affichage de la liste de client)</p>
+    
+<?php require_once 'controleurs/clients.php';
+
+$controleurClients=new ControleurClients;
+
+if (isset($_POST['boutonAjouter'])) {        
+    $controleurClients->ajouter();
+} else if (isset($_POST['boutonEditer'])) {      
+    $controleurClients->editer();
+} else if (isset($_POST['boutonSupprimer'])) {        
+    $controleurClients->supprimer();
+} 
+?>
+
+<div class="container">
+        
+
+        <h1>Liste des clients</h1>
+
+        <?php
+            $controleurClients->afficherTableauGestion();
+        ?>
+
+    </div>
+
 	
   </main>
             

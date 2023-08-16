@@ -1,6 +1,7 @@
 <?php 
 
-include_once(__DIR__ . './include/header.php'); 
+/* include_once(__DIR__ . './include/header.php');  */
+include_once('./include/header.php');
 require_once './controleurs/chalets.php';
 require_once './modeles/chalets.php'?>
 
@@ -71,4 +72,5 @@ require_once './modeles/chalets.php'?>
 
 </main>
 
-<?php include_once(__DIR__ . './include/footer.php'); ?>
+<?php /* include_once(__DIR__ . './include/footer.php'); */
+include_once('./include/footer.php') ?>

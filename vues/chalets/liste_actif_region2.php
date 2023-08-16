@@ -1,7 +1,7 @@
 <!-- Affichage en mode "liste" -->
-<h2>Affichage de la liste actif en promo de chalet :
+<h2>Affichage de la liste actif par region de chalet :
 
-nombre actif en promo (<?php
+nombre actif region 2 (<?php
 echo count($chalets);
 ?>)
 

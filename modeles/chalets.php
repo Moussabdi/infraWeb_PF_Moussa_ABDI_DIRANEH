@@ -90,10 +90,10 @@ class modele_chalet {
         return $chalet;
     }
 
-    public static function ObtenirTousLesChaletsActifParRegion() {
+    public static function ObtenirTousLesChaletsActifParRegion1() {
         $liste = [];
         $mysqli = self::connecter();    
-        $resultatRequete = $mysqli->query("SELECT id, nom, description, personnes_max, prix_haute_saison, prix_basse_saison, actif, promo, date_inscription FROM chalets WHERE (actif=1 and promo=1) ORDER BY nom");
+        $resultatRequete = $mysqli->query("SELECT id, nom, description, personnes_max, prix_haute_saison, prix_basse_saison, actif, promo, date_inscription FROM chalets WHERE (actif=1 and fk_region=1) ORDER BY nom");
         if(is_array($resultatRequete) || is_object($resultatRequete)){
         foreach ($resultatRequete as $enregistrement) {
             $liste[] = new modele_chalet($enregistrement['id'], $enregistrement['nom'], $enregistrement['description'], $enregistrement['personnes_max'], $enregistrement['prix_haute_saison'], $enregistrement['prix_basse_saison'], $enregistrement['actif'],  $enregistrement['promo'], $enregistrement['date_inscription']);
@@ -102,7 +102,42 @@ class modele_chalet {
         return $liste;
     }
    
+    public static function ObtenirTousLesChaletsActifParRegion2() {
+        $liste = [];
+        $mysqli = self::connecter();    
+        $resultatRequete = $mysqli->query("SELECT id, nom, description, personnes_max, prix_haute_saison, prix_basse_saison, actif, promo, date_inscription FROM chalets WHERE (actif=1 and fk_region=2) ORDER BY nom");
+        if(is_array($resultatRequete) || is_object($resultatRequete)){
+        foreach ($resultatRequete as $enregistrement) {
+            $liste[] = new modele_chalet($enregistrement['id'], $enregistrement['nom'], $enregistrement['description'], $enregistrement['personnes_max'], $enregistrement['prix_haute_saison'], $enregistrement['prix_basse_saison'], $enregistrement['actif'],  $enregistrement['promo'], $enregistrement['date_inscription']);
+        }}
+      
+        return $liste;
+    }
   
+    public static function ObtenirTousLesChaletsActifParRegion3() {
+        $liste = [];
+        $mysqli = self::connecter();    
+        $resultatRequete = $mysqli->query("SELECT id, nom, description, personnes_max, prix_haute_saison, prix_basse_saison, actif, promo, date_inscription FROM chalets WHERE (actif=1 and fk_region=3) ORDER BY nom");
+        if(is_array($resultatRequete) || is_object($resultatRequete)){
+        foreach ($resultatRequete as $enregistrement) {
+            $liste[] = new modele_chalet($enregistrement['id'], $enregistrement['nom'], $enregistrement['description'], $enregistrement['personnes_max'], $enregistrement['prix_haute_saison'], $enregistrement['prix_basse_saison'], $enregistrement['actif'],  $enregistrement['promo'], $enregistrement['date_inscription']);
+        }}
+      
+        return $liste;
+    }
+
+    public static function ObtenirTousLesChaletsActifParRegion4() {
+        $liste = [];
+        $mysqli = self::connecter();    
+        $resultatRequete = $mysqli->query("SELECT id, nom, description, personnes_max, prix_haute_saison, prix_basse_saison, actif, promo, date_inscription FROM chalets WHERE (actif=1 and fk_region=4) ORDER BY nom");
+        if(is_array($resultatRequete) || is_object($resultatRequete)){
+        foreach ($resultatRequete as $enregistrement) {
+            $liste[] = new modele_chalet($enregistrement['id'], $enregistrement['nom'], $enregistrement['description'], $enregistrement['personnes_max'], $enregistrement['prix_haute_saison'], $enregistrement['prix_basse_saison'], $enregistrement['actif'],  $enregistrement['promo'], $enregistrement['date_inscription']);
+        }}
+      
+        return $liste;
+    }
+
     public static function ObtenirTousLesChaletsActif() {
       $liste = [];
       $mysqli = self::connecter();    
